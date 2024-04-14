@@ -67,6 +67,10 @@ const connectToDatabase = async () => {
   }
 };
 
+app.get('/health', (req, res) => {
+  res.send("I'm good");
+});
+
 connectToDatabase();
 
 app.listen(port, () => {
